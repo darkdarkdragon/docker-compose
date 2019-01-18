@@ -3,6 +3,7 @@ declare module "docker-compose" {
     upAll(options: IDockerComposeOptions): Promise<IDockerComposeResult>;
     upMany(services:String[], options: IDockerComposeOptions): Promise<IDockerComposeResult>;
     upOne(service:String, options: IDockerComposeOptions): Promise<IDockerComposeResult>;
+    restartOne(service:String, options: IDockerComposeOptions): Promise<IDockerComposeResult>;
     kill(options: IDockerComposeOptions): Promise<IDockerComposeResult>;
     down(options: IDockerComposeOptions): Promise<IDockerComposeResult>;
     stop(options: IDockerComposeOptions): Promise<IDockerComposeResult>;
