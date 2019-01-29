@@ -233,4 +233,4 @@ const ps = function (options) {
   return execCompose('ps', [], options);
 };
 
-module.exports = { upAll, upMany, upOne, kill, down, stop, rm, exec, run, buildAll, buildMany, buildOne, ps };
+module.exports = { upAll, upMany, upOne, kill, down, stop, rm, exec, run, buildAll, buildMany, buildOne, ps, execCompose };
