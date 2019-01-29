@@ -97,6 +97,19 @@ const upOne = function (service, options) {
   return execCompose('up', [ '-d', service ], options);
 };
 
+
+/**
+ * @param {string} service
+ * @param {object} options
+ * @param {string} options.cwd
+ * @param {boolean} [options.log]
+ * @param {?(string|string[])} [options.config]
+ * @param {?object} [options.env]
+ */
+const restartOne = function (service, options) {
+  return execCompose('restart', [service], options);
+};
+
 /**
  * @param {object} options
  * @param {string} options.cwd
@@ -233,4 +246,4 @@ const ps = function (options) {
   return execCompose('ps', [], options);
 };
 
-module.exports = { upAll, upMany, upOne, kill, down, stop, rm, exec, run, buildAll, buildMany, buildOne, ps, execCompose };
+module.exports = { upAll, upMany, upOne, restartOne, kill, down, stop, rm, exec, run, buildAll, buildMany, buildOne, ps, execCompose };
